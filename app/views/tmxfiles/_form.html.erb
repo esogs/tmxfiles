@@ -1,0 +1,25 @@
+<%= form_for(@tmxfile) do |f| %>
+  <% if @tmxfile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tmxfile.errors.count, "error") %> prohibited this tmxfile from being saved:</h2>
+
+      <ul>
+      <% @tmxfile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.check_box :source %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

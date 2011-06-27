@@ -1,0 +1,10 @@
+class Project < ActiveRecord::Base
+  has_many :tmxfiles, :dependent => :destroy
+  has_many :languages, :through => :tmxfiles
+  
+  #http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-fields_for 
+  accepts_nested_attributes_for :tmxfiles, :allow_destroy => true
+ 
+  validates :name, :presence => true
+
+end

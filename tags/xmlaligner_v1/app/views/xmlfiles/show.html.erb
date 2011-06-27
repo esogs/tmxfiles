@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_xmlfile_path(@xmlfile) %> |
+<%= link_to 'Back', xmlfiles_path %>  
+
+<table>
+  <tr>
+    <td><strong>File source name:</strong> <%= @xmlfile.source_name %></td>
+  </tr>
+  <tr>
+    <td><strong>File target name:</strong> <%= @xmlfile.target_name %></td>
+  </tr>
+  <tr>
+    <td><strong>File id:</strong> <%= @xmlfile.id %></td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong> <%= @xmlfile.comment %></td>
+  </tr>
+  <tr>
+    <td><strong>Content Type:</strong> <%= @xmlfile.content_type %></td>
+  </tr>
+  <tr>
+    <td><strong>Source Language:</strong> <%= @xmlfile.source_language %></td>
+  </tr>
+  <tr>
+    <td><strong>Target Language:</strong> <%= @xmlfile.target_language %></td>
+  </tr>
+  <tr>
+    <td><strong>Source Data: </strong><%= Hash.from_xml(@xmlfile.source_data).to_json %></td>
+  </tr>
+   <tr>
+    <td><strong>Target Data: </strong><%= Hash.from_xml(@xmlfile.target_data).to_json %></td>
+  </tr>
+ </table>
+ 
+

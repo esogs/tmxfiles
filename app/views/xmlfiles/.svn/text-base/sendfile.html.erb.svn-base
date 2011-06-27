@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<!-- %= sanitize(@sendfile) % -->
+<!-- %= debug(session) % -->
+<!-- %= debug(params) % -->
+<!-- %= debug(response) % -->
+
+<%= @sendfile %>
+

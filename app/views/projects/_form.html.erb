@@ -1,0 +1,33 @@
+<!-- ActionController::UrlEncodedPairParser.parse_query_parameters “name=fred&phone=0123456789” # => {"name"=>"fred", “phone”=>"0123456789"} -->
+<!-- http://guides.rubyonrails.org/form_helpers.html --> 
+<!-- http://railscasts.com/episodes/196-nested-model-form-part-1 -->
+ 
+<%= form_for(:project, :url => {:action => 'create'}, :html => {:multipart => true}) do |project| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this f from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= project.label :name, "Project Name" %><br />
+    <%= project.text_field :name %><br />
+  </div>
+
+  <div class="field">
+    <%= project.label :comment, "Commment" %><br />
+    <%= project.text_field :comment %>
+  </div>
+
+  <%= project.fields_for :tmxfiles do |tmx| %> 
+    <%= render 'tmx', :tmx => tmx %>
+  <% end %>
+
+<%= submit_tag("Create Project") %>
+<% end %>

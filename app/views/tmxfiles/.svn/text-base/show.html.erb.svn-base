@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @tmxfile.data %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @tmxfile.source %>
+</p>
+
+
+<%= link_to 'Edit', edit_tmxfile_path(@tmxfile) %> |
+<%= link_to 'Back', tmxfiles_path %>

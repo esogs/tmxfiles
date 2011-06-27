@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @project.comment %>
+</p>
+
+<ol>
+<% for tmxfile in @project.tmxfiles %>
+  <li> <%= tmxfile.name, tmxfile.language.name %></li>
+<% end %>
+</ol>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

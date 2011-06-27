@@ -1,0 +1,77 @@
+10
+
+dir
+418
+file:///usr/local/share/svn-repository/xmlaligner/trunk/xmlaligner/tags/xmlaligner_v1/test
+file:///usr/local/share/svn-repository
+
+
+
+2011-06-21T11:50:34.423564Z
+408
+gary
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+2de17a5b-f1a2-de11-aee4-00045a89cf86
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2011-06-24T06:51:27.000000Z
+2b8130eb4e1a65bce16e6e0fbe90d447
+2011-06-14T06:17:30.091383Z
+350
+gary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+454
+
+performance
+dir
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

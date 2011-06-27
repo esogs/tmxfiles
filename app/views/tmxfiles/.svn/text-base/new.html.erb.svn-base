@@ -1,0 +1,14 @@
+<h1>New tmxfile</h1>
+
+ <h1>New tmxfile</h1>
+
+<% form_for(:tmxfile, @tmxfile, :url => {:action => 'save'}, :html => {:multipart => true }) do |form| %>
+
+  Upload your file: <%= form.file_field("data") %><br />
+  <%= radio_button_tag(:source, 1) %><br />
+  <%= label_tag(:source_1, "This is the source file") %><br />
+
+  <%= submit_tag("Upload files") %>
+<% end %>
+
+<%= link_to 'Back', tmxfiles_path %> 

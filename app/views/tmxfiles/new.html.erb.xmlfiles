@@ -1,0 +1,14 @@
+<h1>New xmlfile</h1>
+
+<% form_for(:xmlfile, :url => {:action => 'save'}, :html => {:multipart => true }) do |form| %>
+
+  Comment: <%= form.text_field("comment") %><br />
+  Source Language: <%= form.text_field("source_language") %><br />
+  Target Language: <%= form.text_field("target_language") %><br />
+  Upload your source file: <%= form.file_field("source_xmlfile") %><br />
+  Upload your target file: <%= form.file_field("target_xmlfile") %><br />
+
+  <%= submit_tag("Upload files") %>
+<% end %>
+
+<%= link_to 'Back', xmlfiles_path %>
